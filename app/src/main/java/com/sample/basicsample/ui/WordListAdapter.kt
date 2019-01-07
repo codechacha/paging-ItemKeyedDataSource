@@ -43,10 +43,10 @@ class WordListAdapter internal constructor(context: Context)
     companion object {
         private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Word>() {
             override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean =
-                oldItem.getWord() == newItem.getWord()
+                oldItem.getKey() == newItem.getKey()
 
             override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean =
-                oldItem.getWord() == newItem.getWord()
+                oldItem.getKey() == newItem.getKey()
         }
     }
 }

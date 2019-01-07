@@ -21,8 +21,8 @@ class WordDataSource : ItemKeyedDataSource<Int, Word>() {
     }
 
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Word>) {
-        Log.i(TAG, "Loading key: ${params.key}, count: ${params.requestedLoadSize}")
-        val items = getWordItems(params.key, params.requestedLoadSize)
+        Log.i(TAG, "Loading key: ${params.key + 1}, count: ${params.requestedLoadSize}")
+        val items = getWordItems(params.key + 1, params.requestedLoadSize)
         callback.onResult(items)
     }
 

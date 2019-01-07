@@ -14,8 +14,8 @@ class WordViewModel(app: Application) : AndroidViewModel(app) {
         val dataSourceFactory = WordDataFactory()
         val pagedListConfig = PagedList.Config.Builder()
             .setPageSize(20)
-            .setInitialLoadSizeHint(10) // default: page size * 3
-            .setPrefetchDistance(10) // default: page size
+            .setInitialLoadSizeHint(20) // default: page size * 3
+            .setPrefetchDistance(20) // default: page size
             .setEnablePlaceholders(false) // default: true
             .build()
 
